@@ -1,0 +1,5 @@
+# ignore vscode path
+/vscode/*
+
+# ignore Composer downloads
+/vendor/*

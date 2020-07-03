@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="language" content="PT-BR" />
+    <title>Gerador de Currículo</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <section class="section" id="header-section">
+        <div class="container">
+            <header class="header">
+                <h1 class="title">Gerador de Currículo</h1>
+                <p class="description">
+                    Crie gratuitamente, em poucos minutos, seu curriculum
+                    vitae profissional
+                </p>
+            </header>
+        </div>
+    </section>
+    <section class="section" id="container-form">
+        <form action="gerar.php" method="POST">
+            <div class="container">
+                <h3 class="title">1. QUAL A SUA SITUAÇÃO ATUAL?</h3>
+                <div class="form-group">
+                    <label for="situacao">
+                        Isso é importante para gerar o currículo mais
+                        adequado para o seu caso:
+                    </label>
+                    <select class="form-control" name="situacao" id="situacao">
+                        <option value="">Selecione sua situação atual</option>
+                        <option value="primeiro-emprego">
+                            Procuro meu primeiro emprego
+                        </option>
+                        <option value="desempregado">
+                            Estou desempregado(a), a procura de um emprego
+                        </option>
+                        <option value="aviso-previo">
+                            Estou empregado(a), mas cumprindo aviso prévio
+                        </option>
+                        <option value="empregado">
+                            Estou empregado(a), querendo mudar de emprego
+                        </option>
+                        <option value="estagio">
+                            Procuro um estágio
+                        </option>
+                    </select>
+                </div>
+                <hr />
+            </div>
+            <div class="container">
+                <h3 class="title">2. DADOS PESSOAIS</h3>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="nomeCompleto">
+                                Nome Completo:
+                            </label>
+                            <input class="form-control" type="text" name="nomeCompleto" id="nomeCompleto" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="nacionalidade">
+                                Nacionalidade:
+                            </label>
+                            <input class="form-control" type="text" name="nacionalidade" id="nacionalidade"
+                                value="Brasileiro" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="sexo">
+                                Sexo:
+                            </label>
+                            <select class="form-control" name="sexo" id="sexo">
+                                <option value=""></option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group has-addons">
+                            <label for="idade">
+                                Idade:
+                            </label>
+                            <div class="input-group right">
+                                <input class="form-control" type="number" name="idade" id="idade" />
+                                <div class="input-group-addon">
+                                    Anos
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="estadoCivil">Estado Civil:</label>
+                            <select class="form-control" name="estadoCivil" id="estadoCivil">
+                                <option value=""></option>
+                                <option value="1">Solteiro(a)</option>
+                                <option value="2">Casado(a)</option>
+                                <option value="3">União Estável</option>
+                                <option value="4">Separado(a)</option>
+                                <option value="5">Divorciado(a)</option>
+                                <option value="6">Viúvo(a)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="filhos">Tem Filho(s)?</label>
+                            <select class="form-control" name="filhos" id="filhos">
+                                <option value=""></option>
+                                <option value="S">Sim</option>
+                                <option value="N">Não</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" class="form-control" name="endereco" id="endereco" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <select class="form-control" name="estado" id="estado">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <select class="form-control" name="cidade" id="cidade">
+                                <option value="">Selecione primeiro o estado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" class="form-control" name="telefone" id="telefone" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="celular">Celular</label>
+                            <input type="text" class="form-control" name="celular" id="celular" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="email">E-Mail</label>
+                            <input type="email" class="form-control" name="email" id="email" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <hr>
+                <h3 class="title">3. Objetivo</h3>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" name="objetivo" id="objetivo"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <hr>
+                <h3 class="title">4. FORMAÇÃO ACADÊMICA</h3>
+                <div id="container-formation" class="blocks"></div>
+                <button type="button" class="button bg-purple" onclick="adicionarFormacaoAcademica()">
+                    Adicionar Formação
+                </button>
+            </div>
+            <div class="container">
+                <hr>
+                <h3 class="title">5. EXPERIÊNCIA PROFISSIONAL</h3>
+                <div id="container-experience" class="blocks"></div>
+                <button type="button" class="button bg-purple" onclick="adicionarExperiencia()">
+                    Adicionar experiência profissional
+                </button>
+            </div>
+            <div class="container">
+                <hr>
+                <h3 class="title">6. QUALIFICAÇÕES E ATIVIDADES COMPLEMENTARES</h3>
+                <div id="container-qualification" class="blocks"></div>
+                <button type="button" class="button bg-purple" onclick="adicionarQualificacao()">
+                    Adicionar nova qualificação
+                </button>
+            </div>
+            <div class="container">
+                <hr>
+                <h3 class="title">7. INFORMAÇÕES ADICIONAIS</h3>
+                <div id="container-information" class="blocks"></div>
+                <button type="button" class="button bg-purple" onclick="adicionarInformacao()">
+                    Adicionar novo campo
+                </button>
+                <hr />
+            </div>
+            <div class="container footer">
+                <button type="submit" class="button bg-teal button-send">Enviar</button>
+            </div>
+        </form>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.loadtemplate/1.5.10/jquery.loadTemplate.min.js"
+        integrity="sha512-T1zx+UG2gXu9mr29wvzaKkNUmAOAie40T32ZPIvcRPJgO5br53+Ocqj8gzguUuix7FK+Z3ncRCJMaZcumnPZzg=="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/estados-cidades.js"></script>
+    <script type="text/javascript" src="js/formacao-academica.js"></script>
+    <script type="text/javascript" src="js/experiencia-profissional.js"></script>
+    <script type="text/javascript" src="js/qualificacoes.js"></script>
+    <script type="text/javascript" src="js/informacoes-adicionais.js"></script>
+</body>
+
+</html>

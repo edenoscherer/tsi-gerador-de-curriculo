@@ -1,0 +1,80 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+#header-section {
+    background-color: rgba(64, 224, 208, 0.8);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.075);
+    padding: 20px 0;
+}
+
+.header {}
+
+.header .title {
+    font-size: 3rem;
+}
+
+.header .description {}
+
+.header .title,
+.header .description {
+    text-align: center;
+}
+
+#container-form {
+    padding: 10px 0;
+}
+
+#container-form .title {
+    font-size: 1.5rem;
+}
+
+.blocks>div {
+    border: 1px solid #d2d2d2;
+    background-color: #ededed;
+    padding: 10px 10px 0px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.075);
+    margin-bottom: 13px;
+}
+
+.bg-purple {
+    background-color: #605ca8;
+}
+
+.bg-teal {
+    background-color: #39CCCC;
+}
+
+.button {
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+    color: #ffffff;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 6px 12px;
+}
+
+.button-send {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.34;
+}
